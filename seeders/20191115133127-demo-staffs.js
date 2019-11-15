@@ -1,0 +1,36 @@
+'use strict';
+
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+      return queryInterface.bulkInsert('staffs', [{
+        name: 'yuhu',
+        email: 'yuhu@gmail.com',
+        password: '12345',
+        createdAt : new Date(),
+        updatedAt : new Date()
+      },{
+        name: 'yuhu2',
+        email: 'yuhu2@gmail.com',
+        password: '12345',
+        createdAt : new Date(),
+        updatedAt : new Date()
+      },{
+        name: 'yuhu3',
+        email: 'yuhu3@gmail.com',
+        password: '12345',
+        createdAt : new Date(),
+        updatedAt : new Date()
+      },
+    ], {});
+  },
+
+  down: (queryInterface, Sequelize) => {
+    /*
+      Add reverting commands here.
+      Return a promise to correctly handle asynchronicity.
+
+      Example:
+      return queryInterface.bulkDelete('People', null, {});
+    */
+  }
+};
