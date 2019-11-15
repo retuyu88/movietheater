@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const time_slots = sequelize.define('time_slots', {
-    time_slot: DataTypes.INTEGER,
+    time_id: DataTypes.INTEGER,
     movie_id: DataTypes.INTEGER,
     theater_id: DataTypes.INTEGER
   }, {});
