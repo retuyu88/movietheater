@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const TicketController = require('./controllers/tickets')
 const BookingController = require('./controllers/bookings')
+const SeatController = require('./controllers/seats')
 //create the homepage route
 app.group("/api/v1", (router) => {
     //get information of all tickets
@@ -19,7 +20,8 @@ app.group("/api/v1", (router) => {
     router.get('/ticket/:id', TicketController.one)
     //get information of all booking
     router.get('/bookings', BookingController.index)
-
+    //get information of all seats
+    router.get('/seats', SeatController.index)
 })
 //when this nodejs app executed, it will listen to defined port
 app.listen(port, () => console.log(`Listening on port ${port}!`))

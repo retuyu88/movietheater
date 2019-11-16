@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     bookings.belongsTo(models.seats,{
       as: 'seatid',
       foreignKey: 'seat_id'
-    })
+    }),
     bookings.belongsTo(models.time_slots,{
       as: 'timesid',
       foreignKey: 'time_slot_id'

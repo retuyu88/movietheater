@@ -6,6 +6,10 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   seats.associate = function(models) {
     // associations can be defined here
+    seats.belongsTo(models.theaters,{
+      as: 'theaterid',
+      foreignKey: 'theater_id'
+    })
   };
   return seats;
 };
